@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+
+:root {
+  --bg: #f6f5f1;
+  --bg-elevated: rgba(255, 255, 255, 0.72);
+  --panel: rgba(255, 255, 255, 0.8);
+  --panel-strong: #ffffff;
+  --text: #171717;
+  --text-muted: #4b4b4b;
+  --text-soft: #6d6d6d;
+  --line: rgba(23, 23, 23, 0.12);
+  --line-strong: rgba(23, 23, 23, 0.2);
+  --brand: #1a1a1a;
+  --accent: #c3a46d;
+  --accent-soft: rgba(195, 164, 109, 0.14);
+  --shadow: 0 24px 60px rgba(17, 17, 17, 0.08);
+  --highlight: rgba(17, 17, 17, 0.04);
+}
+
+html[data-theme='dark'] {
+  --bg: #120f0d;
+  --bg-elevated: rgba(29, 25, 22, 0.82);
+  --panel: rgba(34, 30, 27, 0.82);
+  --panel-strong: #1d1916;
+  --text: #f5efe7;
+  --text-muted: #e8dfd2;
+  --text-soft: #b7a58d;
+  --line: rgba(233, 221, 207, 0.12);
+  --line-strong: rgba(233, 221, 207, 0.18);
+  --brand: #d7bf96;
+  --accent: #e8d5ac;
+  --accent-soft: rgba(232, 213, 172, 0.12);
+  --shadow: 0 28px 60px rgba(0, 0, 0, 0.38);
+  --highlight: rgba(232, 213, 172, 0.08);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(195, 164, 109, 0.12), rgba(246, 245, 241, 0.6) 24%, rgba(246, 245, 241, 1) 100%);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+html[data-theme='dark'] body {
+  background:
+    radial-gradient(circle at top, rgba(214, 182, 120, 0.12), rgba(18, 15, 13, 0.35) 24%, rgba(18, 15, 13, 1) 100%);
+}
+
+* { box-sizing: border-box; }
+
+a { text-decoration: none; }
+
+::selection {
+  background: rgba(17, 17, 17, 0.14);
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-card {
+    @apply rounded-[28px] border border-[var(--line)] bg-[var(--panel)] backdrop-blur-sm shadow-[var(--shadow)];
+  }
+
+  .eyebrow {
+    @apply mb-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-[var(--text-soft)];
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold tracking-[-0.06em] text-[var(--text)] md:text-5xl;
+  }
+
+  .body-copy {
+    @apply text-base leading-7 text-[var(--text-muted)];
+  }
+}
