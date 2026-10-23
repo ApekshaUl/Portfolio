@@ -181,13 +181,79 @@ export const skillGroups = [
   },
 ];
 
-export const certifications = [
-  'Oracle Certified Professional: Java SE 17 Developer',
-  'Oracle Certified Professional, Java EE 7 Application Developer',
-  'Oracle Database 23ai: SQL Workshop',
-  'Unix and Linux — Oracle',
-  'SQL (Intermediate) — HackerRank',
-  'Introduction to Generative AI — United Latino Students Association',
+export type Certification = {
+  title: string;
+  href?: string;
+};
+
+export const certifications: Certification[] = [
+  {
+    title: 'Oracle Certified Professional: Java SE 17 Developer',
+    href: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=4813955B13053E4C708C727C9E2EC882DB520664925A2A3306299B1D9DA0C4C4',
+  },
+  {
+    title: 'Oracle Certified Professional, Java EE 7 Application Developer',
+  },
+  {
+    title: 'Oracle Database 23ai: SQL Workshop',
+    href: '/Oracle Database 23ai- SQL Workshop.pdf',
+  },
+  {
+    title: 'Unix and Linux Essentials',
+    href: '/UNIX and Linux Essentials.pdf',
+  },
+  {
+    title: 'SQL (Intermediate) — HackerRank',
+    href: 'https://www.hackerrank.com/certificates/4672f757f2f0',
+  },
+  {
+    title: 'React JS Masterclass',
+    href: 'https://www.credly.com/earner/earned/badge/945ffce1-1b43-4ed0-a1dd-0f9f6dae0d34',
+  },
+  {
+    title: 'AWS Cloud Practitioner Course',
+    href: 'https://www.credly.com/earner/earned/badge/7d9c293d-5d20-48af-be82-6533ba55d9a6',
+  },
+  {
+    title: 'Introduction to Generative AI',
+    href: 'https://www.skills.google/public_profiles/5ae47fdc-76fd-472e-90aa-3f4ef421d703/badges/4586785?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share',
+  },
+  {
+    title: 'Core Spring',
+    href: '/Core Spring.pdf',
+  },
+  {
+    title: 'Spring Boot Fundamentals',
+    href: '/Spring Boot Fundamentals.pdf',
+  },
+  {
+    title: 'FSGIU Core Spring and Spring MVC',
+    href: '/FSGIU Core Spring and Spring MVC.pdf',
+  },
+  {
+    title: 'Functional Testing with Java, Selenium and SoapUI',
+    href: '/Functional Testing with Java, Selenium and SoapUI.pdf',
+  },
+  {
+    title: 'Kafka',
+    href: '/Kafka.pdf',
+  },
+  {
+    title: 'Introduction to DevOps',
+    href: '/Introduction to DevOps.pdf',
+  },
+  {
+    title: 'OCI Generative AI',
+    href: '/OCI Generative AI.pdf',
+  },
+  {
+    title: 'Oracle Database 19c - PLSQL Workshop',
+    href: '/Oracle Database 19c -PLSQL Workshop.pdf',
+  },
+  {
+    title: 'FSGBU Banking Fundamentals',
+    href: '/FSGBU Banking Fundamentals.pdf',
+  },
 ];
 
 export const education = [

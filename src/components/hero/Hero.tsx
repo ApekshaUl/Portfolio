@@ -57,6 +57,7 @@ export function Hero() {
               {personal.email}
             </a>
           </div>
+
         </div>
 
         <div className="relative">

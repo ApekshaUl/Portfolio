@@ -183,7 +183,15 @@ export function App() {
                   />
                   <ul className="mt-6 space-y-3 pl-5 list-disc text-base leading-7 text-(--text-muted)">
                     {certifications.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item.title}>
+                        {item.href ? (
+                          <a href={item.href} target="_blank" rel="noreferrer" className="text-(--text) underline decoration-(--line-strong) underline-offset-4 transition hover:text-(--brand)">
+                            {item.title}
+                          </a>
+                        ) : (
+                          <span>{item.title}</span>
+                        )}
+                      </li>
                     ))}
                   </ul>
                 </div>
